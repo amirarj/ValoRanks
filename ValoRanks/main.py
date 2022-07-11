@@ -6,7 +6,7 @@ import operator
 
 consumer_key = ""
 consumer_secret = ""
-access_token = "1305138391437238273-"
+access_token = ""
 access_token_secret = ""
 bearer_token = ''
 
