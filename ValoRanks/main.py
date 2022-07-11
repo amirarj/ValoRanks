@@ -14,21 +14,6 @@ auth = tweepy.Client(bearer_token, consumer_key, consumer_secret, access_token, 
 redis = redis.Redis(host='127.0.0.1', port=6379, db=0, decode_responses=True)
 
 
-
-
-def get_match(name, tag):
-    try:    
-        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0'}
-        url = f"https://api.henrikdev.xyz/valorant/v3/matches/na/{name}/{tag}"
-        request = requests.get(url, headers=headers)
-        r = request.json()
-        # time.sleep(0.5)
-        print(r['data'][0]['metadata']['matchid'])
-        return r['data'][0]['metadata']['matchid']
-    except Exception as e:
-        print(r)  
-
-
 def get_matchv2(puuid):
     try:
         headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0'}
