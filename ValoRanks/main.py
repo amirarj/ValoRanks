@@ -8,7 +8,7 @@ consumer_key = ""
 consumer_secret = ""
 access_token = ""
 access_token_secret = ""
-bearer_token = ''
+bearer_token = ""
 
 auth = tweepy.Client(bearer_token, consumer_key, consumer_secret, access_token, access_token_secret, wait_on_rate_limit=True)
 redis = redis.Redis(host='127.0.0.1', port=6379, db=0, decode_responses=True)
